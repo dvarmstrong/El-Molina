@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groceries | El Molina</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="modern.js" defer></script>
+</head>
+<body class="grocery-page">
+    <div class="nav">
+        <div class="container">
+            <button class="mobile-menu-btn">
+                <span class="hamburger"></span>
+            </button>
+            <ul id="nav-menu">
+                <li><a href="/index.html"><i class="fas fa-home me-2"></i>Home</a></li>
+                <li><a href="menu.html"><i class="fas fa-utensils me-2"></i>Menu</a></li>
+                <li><a href="groceries.html" class="active"><i class="fas fa-shopping-basket me-2"></i>Groceries</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart me-2"></i>Cart</a></li>
+                <!-- For other pages like menu.html, groceries.html, etc. -->
+<li><a href="index.html#contact"><i class="fas fa-envelope me-2"></i>Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="container mt-4">
+        <h1 class="text-center mb-5 animate-in">Fresh Mexican Groceries</h1>
+    <!-- ! Add Carousel for grocery images erase the cards below  -->
+     <div id="carouselExampleControls" class="carousel slide animate-in" >
+        <div class="carousel-inner rounded-3">
+            <div class="carousel-item active ">
+                <img src="grocery_images/daniel-lerman-Mjw-dIbFl-w-unsplash.jpg" class="d-block w-100" alt="Fresh Avocados">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="fs-1">Fresh Ingredients</h2>
+                    <p class="fs-4">Direct from local farmers to your table</p>
+                </div>
+            </div>
+            <div class="carousel-item ">
+                <img src="grocery_images/falaq-lazuardi-laiA0BlQt8A-unsplash.jpg" class="d-block w-100" alt="Organic Tomatoes">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="fs-1">Organic Produce</h2>
+                    <p class="fs-4">Naturally grown without pesticides</p>
+                </div>
+            </div>
+            <div class="carousel-item ">
+                <img src="grocery_images/jacopo-maia--gOUx23DNks-unsplash.jpg" class="d-block w-100" alt="Bell Peppers">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="fs-1">Colorful Selection</h2>
+                    <p class="fs-4">Everything you need for authentic Mexican dishes</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+   
+    <div class="container mt-5">
+        <h2 class="mb-5 text-center animate-in">Fresh Authentic Ingredients</h2>
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 animate-in">
+                    <div class="card-image-wrapper">
+                        <img src="grocery_images/daniel-lerman-Mjw-dIbFl-w-unsplash.jpg" class="card-img-top" alt="Fresh Avocados">
+                        <div class="card-ribbon">New</div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Fresh Avocados</h5>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <p class="card-text mb-0">
+                                <span class="price">$3.99</span>
+                            </p>
+                            <div class="badge bg-success">Organic</div>
+                        </div>
+                        <p class="card-description">Creamy, ripe avocados perfect for guacamole or topping your favorite tacos.</p>
+                        <button class="btn btn-primary w-100 btn-pulse" onclick="addToCart('Fresh Avocados', '$3.99')"><i class="fas fa-shopping-cart me-2"></i>Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 animate-in">
+                    <div class="card-image-wrapper">
+                        <img src="grocery_images/falaq-lazuardi-laiA0BlQt8A-unsplash.jpg" class="card-img-top" alt="Organic Tomatoes">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Organic Tomatoes</h5>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <p class="card-text mb-0">
+                                <span class="price">$4.50</span>
+                            </p>
+                            <div class="badge bg-success">Organic</div>
+                        </div>
+                        <p class="card-description">Juicy, vine-ripened tomatoes grown locally without pesticides.</p>
+                        <button class="btn btn-primary w-100 btn-pulse" onclick="addToCart('Organic Tomatoes', '$4.50')"><i class="fas fa-shopping-cart me-2"></i>Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 animate-in">
+                    <div class="card-image-wrapper">
+                        <img src="grocery_images/jacopo-maia--gOUx23DNks-unsplash.jpg" class="card-img-top" alt="Bell Peppers">
+                        <div class="card-ribbon">Popular</div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Bell Peppers</h5>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <p class="card-text mb-0">
+                                <span class="price">$2.75</span>
+                            </p>
+                            <div class="badge bg-primary">Fresh</div>
+                        </div>
+                        <p class="card-description">Colorful bell peppers that add crunch and flavor to your favorite dishes.</p>
+                        <button class="btn btn-primary w-100 btn-pulse" onclick="addToCart('Bell Peppers', '$2.75')"><i class="fas fa-shopping-cart me-2"></i>Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 animate-in">
+                    <div class="card-image-wrapper">
+                        <img src="grocery_images/miranda-garside-nCmdKJVhHvw-unsplash.jpg" class="card-img-top" alt="Fresh Cilantro">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Fresh Cilantro</h5>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <p class="card-text mb-0">
+                                <span class="price">$1.25</span>
+                            </p>
+                            <div class="badge bg-primary">Fresh</div>
+                        </div>
+                        <p class="card-description">Aromatic cilantro to add authentic flavor to salsas and garnishes.</p>
+                        <button class="btn btn-primary w-100 btn-pulse" onclick="addToCart('Fresh Cilantro', '$1.25')"><i class="fas fa-shopping-cart me-2"></i>Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Feature section -->
+    <div class="container my-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="feature-box animate-in p-4 text-center bg-white rounded-3 shadow-sm">
+                    <i class="fas fa-truck fs-1 mb-3 text-primary"></i>
+                    <h3>Free Delivery</h3>
+                    <p>On orders over $50 within 10 miles</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-box animate-in p-4 text-center bg-white rounded-3 shadow-sm">
+                    <i class="fas fa-leaf fs-1 mb-3 text-success"></i>
+                    <h3>Fresh & Organic</h3>
+                    <p>Hand-selected produce from local farms</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-box animate-in p-4 text-center bg-white rounded-3 shadow-sm">
+                    <i class="fas fa-utensils fs-1 mb-3 text-warning"></i>
+                    <h3>Authentic Taste</h3>
+                    <p>Imported directly from Mexico</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,17 @@
+{
+  "name": "el_molina",
+  "version": "1.0.0",
+  "description": "My favorite mexican grocery ",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dimitri",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "el_molina": "file:",
+    "uuid": "^10.0.0"
+  }
+}
